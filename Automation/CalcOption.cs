@@ -43,6 +43,7 @@
         LogAllMessages,
         TransportationStatistics,
         ActionsEachTimestep,
-        CalculationFlameChart
+        CalculationFlameChart,
+        SumProfileExternalIndividualHouseholdsAsJson
     }
 }

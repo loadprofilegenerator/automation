@@ -27,7 +27,7 @@ namespace Automation {
         {
             List<string> wrapped = WrapText(Text, 60);
             switch (List) {
-                case ListPossibleOptions.ListOutputDefaults: {
+                case ListPossibleOptions.ListOutputFileDefaults: {
                     wrapped.Add("Possible Options:");
                     foreach (var name in Enum.GetNames(typeof(OutputFileDefault))) {
                         wrapped.Add(name);

@@ -1,7 +1,7 @@
 ﻿namespace Automation {
     public enum ListPossibleOptions {
         None,
-        ListOutputDefaults,
+        ListOutputFileDefaults,
         ListCalcOptions,
         EnergyIntensityTypes,
         LoadTypePriorities

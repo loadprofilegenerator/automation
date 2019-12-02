@@ -4,6 +4,7 @@ using JetBrains.Annotations;
 
 namespace Automation {
     public class DistrictData {
+
         public DistrictData([NotNull] string name)
         {
             Name = name;
@@ -20,5 +21,7 @@ namespace Automation {
         public List<HouseData> Houses { get; set; } = new List<HouseData>();
         [NotNull]
         public string Name { get; set; }
+
+        public bool SkipExistingHouses { get; set; }
     }
 }

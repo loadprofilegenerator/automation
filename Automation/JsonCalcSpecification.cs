@@ -80,6 +80,7 @@ namespace Automation {
             "But maybe you don't need the warm water profiles and only want the electricity files. Then you can put Electricity here (case is important!) and the LPG will skip everything " +
             "in postprocessing that is not in this list. Leave this blank or delete the option entirely if you want all the result files.")]
         [CanBeNull]
+        [ItemCanBeNull]
         public List<string> LoadtypesForPostprocessing { get; set; } = new List<string>();
 
 
@@ -103,7 +104,7 @@ namespace Automation {
 
         [Comment("This sets which output files are generated. You need to use one of the defaults. " +
                  "If you want some additional individual output, you can use the calc options list of individual settings to enable additional things.",
-            ListPossibleOptions.ListOutputDefaults)]
+            ListPossibleOptions.ListOutputFileDefaults)]
         [JsonConverter(typeof(StringEnumConverter))]
         public OutputFileDefault DefaultForOutputFiles { get; set; } = OutputFileDefault.ReasonableWithChartsAndPDF;
 
@@ -197,6 +198,8 @@ namespace Automation {
         public JsonReference TravelRouteSet { get; set; }
         [Comment("This option make the LPG delete all the SQLite result files after the calculation. Only enable this if you really only want the load profiles and no further processing. Default=false")]
         public bool DeleteSqlite { get; set; }
+        [Comment("When using household templates, sometimes random households are generated that don't work. With this option you can make the LPG force to simulate at least some of the cases anyway. Default=false")]
+        public bool IgnorePreviousActivitiesWhenNeeded { get; [UsedImplicitly] set; }
 
         [NotNull]
         public static JsonCalcSpecification LoadFromFile([NotNull] string inputFile)

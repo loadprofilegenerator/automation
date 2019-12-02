@@ -4,8 +4,8 @@ using Newtonsoft.Json.Converters;
 
 namespace Automation.ResultFiles {
     public class HouseholdKeyEntry {
-        public HouseholdKeyEntry([NotNull] HouseholdKey householdKey, [NotNull] string householdName, HouseholdKeyType type, [NotNull] string householdDescription, string houseName,
-                                 string houseDescription)
+        public HouseholdKeyEntry([NotNull] HouseholdKey householdKey, [NotNull] string householdName, HouseholdKeyType type, [NotNull] string householdDescription, [CanBeNull] string houseName,
+                                 [CanBeNull] string houseDescription)
         {
             HouseholdKey = householdKey;
             HouseholdName = householdName;

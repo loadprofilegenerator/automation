@@ -1,1 +1,1 @@
-robocopy V:\Dropbox\LPG\Automation V:\Dropbox\LpgAutomation\lpgautomation\Automation /E /R:0 /W:0 
+robocopy V:\Dropbox\LPG\Automation V:\Dropbox\LpgAutomation\Automation /E /R:0 /W:0 /MIR

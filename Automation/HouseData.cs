@@ -32,5 +32,8 @@ namespace Automation {
 
         public double TargetCoolingDemand { get; set; }
         public double TargetHeatDemand { get; set; }
+
+        public bool IsHeatingProfileCalculated { get; set; }
+        public bool IsAirConditioningProfileCalculated { get; set; }
     }
 }
